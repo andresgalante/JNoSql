@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,400,900');
+
+
+$font-size-base: 1rem;
+$h2-font-size: $font-size-base * 2;
+$grid-gutter-width: 140px;
+$font-family-sans-serif: 'Raleway', sans-serif;
+
+$font-weight-light: 100 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 900 !default;
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+  margin-top: 30px;
+  color: gray;
+  background-color: lightgray;
+  @include media-breakpoint-up(lg) {
+    margin-top: 0;
+  }
+}
+
+
+::selection {
+  background: blue;
+  color: white;
+}
+
+//header
+
+header {
+  padding-bottom: 2em;
+  position: sticky;
+  top: 1em;
+  @include media-breakpoint-up(lg) {
+  }
+}
+
+// nav
+.nsq-nav {
+  display: none;
+  @include media-breakpoint-up(lg) {
+  display: block;
+  background: rgba(255,255,255,.8);
+  position: sticky;
+  border-bottom: 1px solid grey;
+  top: 0;
+  margin-left: -($grid-gutter-width/2);
+  margin-right: -($grid-gutter-width/2);
+  padding-left: ($grid-gutter-width/2);
+  padding-right: ($grid-gutter-width/2);
+  // margin-bottom: ($grid-gutter-width/4);
+  ul {
+    margin-bottom: 0;
+    display: flex;
+    align-items: stretch;
+    min-height: 3em;
+    li {
+      flex: 1;
+      display: flex;
+      align-items: stretch;
+      text-transform: uppercase;
+      font-size: $font-size-sm;
+    }
+    a {
+      flex: 1;
+      display: block;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      &:hover{
+        background: gray;
+      }
+    }
+  }
+}
+
+}
+
+// mian
+.main {
+  background: white;
+  min-height: 100vh;
+}
+
+
+
+section {
+  border-bottom: 1px solid gray;
+  padding: 5em 0;
+  &:last-of-type {
+    border: none;
+  }
+}
+
+h2 {
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+}
+
+
+// footer
+footer {
+  margin-left: -($grid-gutter-width/2);
+  margin-right: -($grid-gutter-width/2);
+  padding-left: ($grid-gutter-width/2);
+  padding-right: ($grid-gutter-width/2);
+  background: gray;
+  color: #fff;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  p:last-child{
+    margin: 0;
+  }
+}

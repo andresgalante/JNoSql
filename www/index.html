@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JNoSql Project</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+  <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <div class="col-lg-4">
+
+        <header>
+          <h1>JNoSQL</h1>
+
+          <p>The JNoSQL is a framework to help Java developers to create Java EE applications with NoSQL, so they can create scalable application enjoying polyglot persistence.</p>
+
+          <a href="#" class="btn btn-primary btn-block btn-lg">View on GitHub</a>
+      </header> <!-- header -->
+
+    </div> <!-- col -->
+
+
+    <main class="col-lg-8 main" id="main">
+
+      <nav class="nsq-nav">
+        <ul class="list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Examples</a></li>
+          <li><a href="#">Docs</a></li>
+          <li><a href="#">Join Us</a></li>
+        </ul>
+      </nav>
+
+      <section>
+        <h2>What is JNoSQL</h2>
+        <p>The JNoSQL is a several tools to make easy an integration between the Java Application with the NoSQL. The project has two layers:</p>
+
+        <ul>
+          <li>Communication API: An API just to communicate with the database, exactly what JDBC does to SQL. This API has four specializations, one for each kind of database.</li>
+          <li>Mapping API: An API to do integration and do the best integration with the Java developer. That is annotation and CDI driven have integration with other technologies such as Bean Validation, etc. This layer does what JPA does to relational technology.</li>
+</ul>
+        <p>The basic building blocks hereby are:</p>
+        <ul>
+        <li>A simple API to support Column NoSQL Database</li>
+        <li>A simple API to support Key-value NoSQL Database</li>
+        <li>A simple API to support Graph NoSQL Database</li>
+        <li>A simple API to support Document Database</li>
+        <li>Convention over configuration</li>
+        <li>Support for asynchronous queries</li>
+        <li>Support for asynchronous write operations</li>
+        <li>An easy API to implement, so that NoSQL vendors can comply with it and test by themselves.</li>
+</ul>
+        <p>The API's focus is on simplicity and ease of use. Developers should only have to know a minimal set of artifacts to work with the solution. The API is built on latest Java 8 features and therefore fit perfectly with the functional features of Java 8.</p>
+
+        <h3>Diana</h3>
+        <p>The Diana project has as goal just be the low layer, in other words, just the communication layer to NoSQL database. Basically this project works as a database driver. Diana have four APIs, one for each database type, and its TCK respective. The test compatibility kit affirms if a driver implements an API correctively. So a X database of key-value implements and run all tests correctively that means this X database has support to key-value Diana API.</p>
+
+        <h3>Artemis</h3>
+        <p>Artemis is an integration layer, in other words, it has the goal to communicate with the communication layer, Diana, and it does integrations with other technologies such as Bean Validation. The Artemis engine has CDI. So it formula is really simple:</p>
+
+        <p><strong>Diana plus CDI equals to Artemis</strong></p>
+
+        <p>Look like Diana, it has a different package to each NoSQL database. Using CDI as heart, Artemis is highly customizable also observe events on the persistence flow. Artemis has a nice feature such as:</p>
+<ul>
+        <li>Annotation based</li>
+        <li>Highly customizable \(reflection component, how to save the cache, persistence workflow, etc.\)</li>
+        <li>Listen to an event to each kind of persistence workflow \(it has differents kind of events to each database\).</li>
+        <li>Use interceptors</li>
+        <li>Using CDI events to add a new feature on Artemis is so easy and you also can it on transparency way, you don't need to change the repositories. E.G: Using events can add bean validation on the workflow, without the DAO layer know.</li>
+</ul>
+
+      </section>
+      <section>
+<h2>Support</h2>
+<p>Currently, JNoSQL works with the following databases</p>
+      </section>
+
+      <section>
+      <h2>Examples</h2>
+      <p>Here you can see some examples of usage of Diana.</p>
+      <pre>
+        <code>
+public class AppDocument {
+
+  private static final String DOCUMENT_COLLECTION = "document_collection";
+  private static final String DATABASE = "database";
+
+  public static void main(String[] args)  {
+    DocumentConfiguration configuration = //any implementation
+    try(DocumentCollectionManagerFactory collectionFactory = configuration.getManagerFactory();) {
+      DocumentCollectionManager collectionManager = collectionFactory.getDocumentEntityManager(DATABASE);
+
+      DocumentCollectionEntity entity = DocumentCollectionEntity.of(DOCUMENT_COLLECTION);
+      entity.add(Document.of("name", "Daniel Soro"));
+      entity.add(Document.of("age", 26));
+
+      DocumentCollectionEntity entitySaved = collectionManager.insert(entity);
+      Optional<Document> id = entitySaved.find("_id");
+
+
+      DocumentQuery query = select().from(DOCUMENT_COLLECTION).where(eq(id.get())).build();
+      List<DocumentCollectionEntity> documentsFound = collectionManager.find(query);
+
+    }
+  }
+}
+        </code>
+      </pre>
+
+      </section>
+
+<footer>
+  <h2>Download</h2>
+  <p>Download
+Diana is a flexible and extensible API to connect NoSQL databases. It brings an easy interface to support key-value, column family, document oriented and graph databases as JDBC does for SQL databases.
+
+View on GitHub
+</p>
+
+<h2>Join Us</h2>
+<p>Meet the developers, and stay tunned on the news about Diana development. You may want to become one of us!<p>
+
+Join Us  Mailing list  Wiki
+
+<p><small>JNoSQL is maintained by JNOSQL.</small></p>
+</footer>
+
+    </main> <!-- col -->
+
+  </div><!--  row -->
+
+</div><!-- Container -->
+
+
+
+
+</body>
+</html>
