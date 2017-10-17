@@ -43,7 +43,7 @@ body {
 
   @include media-breakpoint-up(lg) {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1.7fr;
     height: 100vh;
     overflow: hidden;
   }
@@ -60,8 +60,9 @@ header, main {
 
 header {
   background-color: black;
-  padding-bottom: 2em;
   color: white;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 
   h1{
     // letter-spacing: 1rem;
@@ -105,10 +106,12 @@ header {
         align-items: center;
         color: black;
         border-left: 1px solid lightgrey;
+        transition: all ease .4s;
         &:hover{
           background-color: black;
           color: white;
           text-decoration: none;
+          box-shadow:  0rem 0.5rem 1rem -0.5rem rgba(0, 0, 0, 0.3);;
         }
       }
     }
@@ -143,15 +146,16 @@ h2 {
   padding-top: 2em;
   border-bottom: 1px solid lightgrey;
   margin-bottom: 2em;
+  position: sticky;
+  top: 0;
+  background-color: rgba(255,255,255,.95);
 
   @include media-breakpoint-up(lg) {
     margin-left: -($ns-gutter);
     margin-right: -($ns-gutter);
     padding-left: $ns-gutter;
     padding-right: $ns-gutter;
-    position: sticky;
     top: calc(#{$ns-nav-height} + 3px);
-    background-color: rgba(255,255,255,.95);
   }
 }
 
@@ -185,4 +189,18 @@ h2 {
   p:last-child{
     margin: 0;
   }
+}
+
+
+h1{
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 1rem 0;
+  line-height: 0;
+}
+svg {
+  fill: #fff;
+  width: 50%;
 }
