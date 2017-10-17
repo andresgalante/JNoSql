@@ -1,4 +1,4 @@
-# The PatternFly Conference
+# jNoSQL
 
 ``npm install``
 
