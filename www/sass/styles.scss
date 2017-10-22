@@ -1,49 +1,81 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:100,400,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
-
-$font-size-base: 1.1rem;
+$font-size-base: 1.2rem;
 $h2-font-size: $font-size-base * 2;
 
-// $line-height-base: 2;
-// $font-family-sans-serif: 'Raleway', sans-serif;
+$font-family-sans-serif: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-// $font-weight-light: 100 !default;
-// $font-weight-normal: 400 !default;
-// $font-weight-bold: 900 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
 
 $ns-gutter: 4em;
 $ns-gutter-sm: 2em;
 
 $ns-border: 5px;
 
-$ns-nav-height: 3rem;
-
-$gray-900: black;
-
-$enable-rounded: false;
+$ns-nav-height: 2.5rem;
 
 
-//$ns-
+$primary-color: #2b4799;
+$border-color: rgba($primary-color, 0.2);
 
-@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+// Imports the parts of Bootstrap we use:
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/root";
+@import "node_modules/bootstrap/scss/print";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/code";
+// @import "node_modules/bootstrap/scss/grid";
+// @import "node_modules/bootstrap/scss/tables";
+// @import "node_modules/bootstrap/scss/forms";
+@import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/transitions";
+// @import "node_modules/bootstrap/scss/dropdown";
+// @import "node_modules/bootstrap/scss/button-group";
+// @import "node_modules/bootstrap/scss/input-group";
+// @import "node_modules/bootstrap/scss/custom-forms";
+// @import "node_modules/bootstrap/scss/nav";
+// @import "node_modules/bootstrap/scss/navbar";
+// @import "node_modules/bootstrap/scss/card";
+// @import "node_modules/bootstrap/scss/breadcrumb";
+// @import "node_modules/bootstrap/scss/pagination";
+// @import "node_modules/bootstrap/scss/badge";
+// @import "node_modules/bootstrap/scss/jumbotron";
+// @import "node_modules/bootstrap/scss/alert";
+// @import "node_modules/bootstrap/scss/progress";
+// @import "node_modules/bootstrap/scss/media";
+// @import "node_modules/bootstrap/scss/list-group";
+// @import "node_modules/bootstrap/scss/close";
+// @import "node_modules/bootstrap/scss/modal";
+// @import "node_modules/bootstrap/scss/tooltip";
+// @import "node_modules/bootstrap/scss/popover";
+// @import "node_modules/bootstrap/scss/carousel";
+@import "node_modules/bootstrap/scss/utilities";
+
 
 body {
-  // color: gray;
+  font-weight: $font-weight-normal;
 }
 
 
 ::selection {
-  background: black;
+  background: $primary-color;
   color: white;
 }
 
-//container
+// Layout
 
 .ns-container {
 
   @include media-breakpoint-up(lg) {
     display: grid;
-    grid-template-columns: 1fr 1.7fr;
+    grid-template-columns: 1fr 2fr;
     height: 100vh;
     overflow: hidden;
   }
@@ -56,30 +88,67 @@ header, main {
     // background-image: linear-gradient(to bottom, red, blue);
   }
 }
-//header
+
+
+// header
 
 header {
-  background-color: black;
+  background-color: $primary-color;
+  background-image:
+  radial-gradient(circle at top center, rgba(#2b4799,.5), transparent),
+  linear-gradient(to left, #2b4799, transparent),
+  // linear-gradient(45deg, #2b4799 40%, transparent 40%, transparent),
+  // linear-gradient(45deg, transparent 40%, rgba(#003566,.5) 40%, transparent 41%),
+  linear-gradient(-45deg, rgba(#b6367d,.3) 40%, transparent 40%, transparent),
+  linear-gradient(-45deg, transparent 40%, rgba(#003566,.2) 40%, transparent 41%),
+
+  linear-gradient(to bottom, #b6367d, #2b4799);
   color: white;
   padding-top: 3rem;
   padding-bottom: 3rem;
-
-  h1{
-    // letter-spacing: 1rem;
-    text-transform: uppercase;
+  p {
+    margin-bottom: 2rem;
   }
+
 }
 
+h1{
+  border-top: 1px solid rgba(white, 0.2);
+  border-bottom: 1px solid rgba(white, 0.2);
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 1rem 0;
+  line-height: 0;
+  position: relative;
+  .logo-image {
+    // background-image: radial-gradient(circle at center center, red, red 80px, transparent 80px);
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 100%;
+  }
+  img {
+    height: 100px;
+  }
+
+}
+svg {
+  fill: #fff;
+  width: 70%;
+}
+
+
 // nav
+
 .ns-nav {
   display: none;
-  z-index: 1;
+  z-index: 2;
   @include media-breakpoint-up(lg) {
     display: block;
     background: rgba(255,255,255,.95);
     position: sticky;
-    border-bottom: 1px solid lightgrey;
-    border-top: 2px solid black;
+    border-bottom: 1px solid $border-color;
+    border-top: 2px solid $primary-color;
     top: 0;
     margin-left: -($ns-gutter);
     margin-right: -($ns-gutter);
@@ -90,40 +159,38 @@ header {
       display: flex;
       align-items: stretch;
       min-height: $ns-nav-height;
-      border-right: 1px solid lightgrey;
-      li {
-        flex: 1;
-        display: flex;
-        align-items: stretch;
-        text-transform: uppercase;
-        font-size: $font-size-sm;
-      }
-      a {
-        flex: 1;
-        display: block;
-        justify-content: center;
-        display: flex;
-        align-items: center;
-        color: black;
-        border-left: 1px solid lightgrey;
-        transition: all ease .4s;
-        &:hover{
-          background-color: black;
-          color: white;
-          text-decoration: none;
-          box-shadow:  0rem 0.5rem 1rem -0.5rem rgba(0, 0, 0, 0.3);;
-        }
+      border-right: 1px solid $border-color;
+    }
+    li {
+      flex: 1;
+      display: flex;
+      align-items: stretch;
+      text-transform: uppercase;
+      font-size: $font-size-sm;
+    }
+    a {
+      flex: 1;
+      display: block;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      color: rgba($primary-color, 0.6);
+      border-left: 1px solid $border-color;
+      transition: all ease .4s;
+      font-size: .8rem;
+      &:hover{
+        background-color: $primary-color;
+        color: white;
+        text-decoration: none;
+        box-shadow:  0rem 0.5rem 1rem -0.5rem rgba(0, 0, 0, 0.5);;
       }
     }
   }
-
 }
 
 // mian
-.main {
-// background-image: linear-gradient(to left, red, red 30px, blue 30px, blue);
-// background-image:  linear-gradient(to left, black, black $ns-border, transparent $ns-border);
 
+.main {
   @include media-breakpoint-up(lg) {
     overflow-y: scroll;
   }
@@ -144,11 +211,13 @@ h2 {
   margin-right: -($ns-gutter-sm);
   padding: 1em $ns-gutter-sm;
   padding-top: 2em;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid $border-color;
   margin-bottom: 2em;
   position: sticky;
   top: 0;
   background-color: rgba(255,255,255,.95);
+  color: $primary-color;
+  z-index: 1;
 
   @include media-breakpoint-up(lg) {
     margin-left: -($ns-gutter);
@@ -164,43 +233,55 @@ h3 {
   margin-top: 2em;
 }
 
+.logo-galery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  align-items: center;
+
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  a {
+    filter: grayscale(1);
+    transition: all ease .4s;
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
+
 // footer
 footer {
   margin-left: -($ns-gutter-sm);
   margin-right: -($ns-gutter-sm);
   padding-left: $ns-gutter-sm;
   padding-right: $ns-gutter-sm;
-
-h2 {
-  background: #222;
-  border-bottom-color: #444;
-}
-@include media-breakpoint-up(lg) {
-  margin-left: -($ns-gutter);
-  margin-right: -($ns-gutter);
-  padding-left: $ns-gutter;
-  padding-right: $ns-gutter;
-}
-  background-color: #222;
+  background-color: darken($primary-color, 10%);
+  background-image: linear-gradient(to right, rgba(black, .2), transparent 1rem);
   color: #fff;
   padding-top: 3em;
   padding-bottom: 3em;
 
+  h2 {
+    background-color: darken($primary-color, 10%);
+    background-image: linear-gradient(to right, rgba(black, .2), transparent 1rem);
+    border-bottom-color: rgba(white, 0.2);
+    color: white;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-left: -($ns-gutter);
+    margin-right: -($ns-gutter);
+    padding-left: $ns-gutter;
+    padding-right: $ns-gutter;
+  }
+
   p:last-child{
     margin: 0;
   }
-}
-
-
-h1{
-  border-top: 1px solid #444;
-  border-bottom: 1px solid #444;
-  text-align: center;
-  margin-bottom: 3rem;
-  padding: 1rem 0;
-  line-height: 0;
-}
-svg {
-  fill: #fff;
-  width: 50%;
 }

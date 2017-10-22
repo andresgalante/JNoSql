@@ -5,11 +5,6 @@
   <title>JNoSql Project</title>
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
-  <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> -->
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
@@ -18,149 +13,172 @@
 
     <header>
       <h1>
+        <div class="logo-image">
+          <img src="img/logo-small.png" alt="Logo os JNoSQL: image of Duke, Java's cartoon mascot, with a bow and arrow pointing to the right">
+        </div>
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        	 viewBox="0 0 307.4 53.6" style="enable-background:new 0 0 307.4 53.6;" xml:space="preserve">
+        viewBox="0 0 307.4 53.6" style="enable-background:new 0 0 307.4 53.6;" xml:space="preserve">
         <g>
-        	<g>
-        		<path d="M0,34h9.2v2.4c0,6.1,3.3,8.1,6.8,8.1s6.6-2.1,6.6-7.7V8.9H9.4v-8h22.5V37c0,11.2-8.1,16-16,16C8,53,0,48,0,37V34z"/>
-        		<path d="M49.2,1.6h2.9l28.8,39.6c1.7,2.3,4.1,6.4,4.1,6.4h0.1c0,0-0.4-3.8-0.4-6.4V1.6h3.1v50.5H85L56.2,12.5
-        			c-1.7-2.3-4.1-6.4-4.1-6.4h-0.1c0,0,0.4,3.8,0.4,6.4v39.6h-3.1V1.6z"/>
-        		<path d="M129.1,0.7c14.1,0,25.6,11.3,25.6,25.8c0,14.9-11.5,26.5-25.6,26.5c-14.1,0-25.6-11.6-25.6-26.5
-        			C103.5,12,115,0.7,129.1,0.7z M129.1,50c12.3,0,22.3-10.3,22.3-23.5c0-12.9-10-22.8-22.3-22.8c-12.3,0-22.3,9.9-22.3,22.8
-        			C106.8,39.8,116.8,50,129.1,50z"/>
-        		<path d="M170.2,39c0,0,5.6,5.4,12.8,5.4c3.9,0,7.4-2,7.4-6.2c0-9.2-24.2-7.6-24.2-23.3c0-8.5,7.4-14.9,17.2-14.9
-        			c10.1,0,15.3,5.5,15.3,5.5l-4,7.6c0,0-4.9-4.5-11.3-4.5c-4.3,0-7.7,2.5-7.7,6.1c0,9.1,24.1,6.9,24.1,23.2c0,8.2-6.2,15-16.9,15
-        			c-11.4,0-17.7-7-17.7-7L170.2,39z"/>
-        		<path d="M235.5,0c15.2,0,26.6,11.5,26.6,26.2c0,6.2-2.2,11.8-5.6,16.2l5.8,5.2l-5.3,5.9l-5.7-5.6c-4.3,3.2-9.7,5.1-15.7,5.1
-        			c-15,0-26.4-11.8-26.4-26.8C209.1,11.5,220.5,0,235.5,0z M235.5,44.5c3.1,0,6.5-1,9-2.7l-5.7-5.4l5.3-5.8l5.6,5.6
-        			c1.7-2.8,2.8-6.3,2.8-9.9c0-10.2-7.4-17.7-17-17.7c-9.4,0-16.8,7.5-16.8,17.7C218.7,36.7,226.1,44.5,235.5,44.5z"/>
-        		<path d="M275.9,0.9h9.3v43.3h22.2v8h-31.5V0.9z"/>
-        	</g>
+          <g>
+            <path d="M0,34h9.2v2.4c0,6.1,3.3,8.1,6.8,8.1s6.6-2.1,6.6-7.7V8.9H9.4v-8h22.5V37c0,11.2-8.1,16-16,16C8,53,0,48,0,37V34z"/>
+            <path d="M49.2,1.6h2.9l28.8,39.6c1.7,2.3,4.1,6.4,4.1,6.4h0.1c0,0-0.4-3.8-0.4-6.4V1.6h3.1v50.5H85L56.2,12.5
+            c-1.7-2.3-4.1-6.4-4.1-6.4h-0.1c0,0,0.4,3.8,0.4,6.4v39.6h-3.1V1.6z"/>
+            <path d="M129.1,0.7c14.1,0,25.6,11.3,25.6,25.8c0,14.9-11.5,26.5-25.6,26.5c-14.1,0-25.6-11.6-25.6-26.5
+            C103.5,12,115,0.7,129.1,0.7z M129.1,50c12.3,0,22.3-10.3,22.3-23.5c0-12.9-10-22.8-22.3-22.8c-12.3,0-22.3,9.9-22.3,22.8
+            C106.8,39.8,116.8,50,129.1,50z"/>
+            <path d="M170.2,39c0,0,5.6,5.4,12.8,5.4c3.9,0,7.4-2,7.4-6.2c0-9.2-24.2-7.6-24.2-23.3c0-8.5,7.4-14.9,17.2-14.9
+            c10.1,0,15.3,5.5,15.3,5.5l-4,7.6c0,0-4.9-4.5-11.3-4.5c-4.3,0-7.7,2.5-7.7,6.1c0,9.1,24.1,6.9,24.1,23.2c0,8.2-6.2,15-16.9,15
+            c-11.4,0-17.7-7-17.7-7L170.2,39z"/>
+            <path d="M235.5,0c15.2,0,26.6,11.5,26.6,26.2c0,6.2-2.2,11.8-5.6,16.2l5.8,5.2l-5.3,5.9l-5.7-5.6c-4.3,3.2-9.7,5.1-15.7,5.1
+            c-15,0-26.4-11.8-26.4-26.8C209.1,11.5,220.5,0,235.5,0z M235.5,44.5c3.1,0,6.5-1,9-2.7l-5.7-5.4l5.3-5.8l5.6,5.6
+            c1.7-2.8,2.8-6.3,2.8-9.9c0-10.2-7.4-17.7-17-17.7c-9.4,0-16.8,7.5-16.8,17.7C218.7,36.7,226.1,44.5,235.5,44.5z"/>
+            <path d="M275.9,0.9h9.3v43.3h22.2v8h-31.5V0.9z"/>
+          </g>
         </g>
-        </svg>
+      </svg>
 
-      </h1>
+    </h1>
 
-      <p>The JNoSQL is a framework to help Java developers to create Java EE applications with NoSQL, so they can create scalable application enjoying polyglot persistence.</p>
+    <p>The JNoSQL is a framework to help Java developers to create Java EE applications with NoSQL, so they can create scalable application enjoying polyglot persistence.</p>
 
-      <a href="#" class="btn btn-secondary btn-block btn-lg">View on GitHub</a>
-    </header> <!-- header -->
+    <a href="#" class="btn btn-outline-light btn-block btn-lg">View on GitHub</a>
 
-
-
-    <main class="main" id="main">
-
-      <nav class="ns-nav">
-        <ul class="list-unstyled">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Support</a></li>
-          <li><a href="#">Examples</a></li>
-          <li><a href="#">Docs</a></li>
-          <li><a href="#">Join Us</a></li>
-        </ul>
-      </nav>
-
-      <section>
-        <h2>What is JNoSQL</h2>
-        <p>The JNoSQL is a several tools to make easy an integration between the Java Application with the NoSQL. The project has two layers:</p>
-
-        <ul>
-          <li>Communication API: An API just to communicate with the database, exactly what JDBC does to SQL. This API has four specializations, one for each kind of database.</li>
-          <li>Mapping API: An API to do integration and do the best integration with the Java developer. That is annotation and CDI driven have integration with other technologies such as Bean Validation, etc. This layer does what JPA does to relational technology.</li>
-        </ul>
-        <p>The basic building blocks hereby are:</p>
-        <ul>
-          <li>A simple API to support Column NoSQL Database</li>
-          <li>A simple API to support Key-value NoSQL Database</li>
-          <li>A simple API to support Graph NoSQL Database</li>
-          <li>A simple API to support Document Database</li>
-          <li>Convention over configuration</li>
-          <li>Support for asynchronous queries</li>
-          <li>Support for asynchronous write operations</li>
-          <li>An easy API to implement, so that NoSQL vendors can comply with it and test by themselves.</li>
-        </ul>
-        <p>The API's focus is on simplicity and ease of use. Developers should only have to know a minimal set of artifacts to work with the solution. The API is built on latest Java 8 features and therefore fit perfectly with the functional features of Java 8.</p>
-
-        <h3>Diana</h3>
-        <p>The Diana project has as goal just be the low layer, in other words, just the communication layer to NoSQL database. Basically this project works as a database driver. Diana have four APIs, one for each database type, and its TCK respective. The test compatibility kit affirms if a driver implements an API correctively. So a X database of key-value implements and run all tests correctively that means this X database has support to key-value Diana API.</p>
-
-        <h3>Artemis</h3>
-        <p>Artemis is an integration layer, in other words, it has the goal to communicate with the communication layer, Diana, and it does integrations with other technologies such as Bean Validation. The Artemis engine has CDI. So it formula is really simple:</p>
-
-        <p><strong>Diana plus CDI equals to Artemis</strong></p>
-
-        <p>Look like Diana, it has a different package to each NoSQL database. Using CDI as heart, Artemis is highly customizable also observe events on the persistence flow. Artemis has a nice feature such as:</p>
-        <ul>
-          <li>Annotation based</li>
-          <li>Highly customizable \(reflection component, how to save the cache, persistence workflow, etc.\)</li>
-          <li>Listen to an event to each kind of persistence workflow \(it has differents kind of events to each database\).</li>
-          <li>Use interceptors</li>
-          <li>Using CDI events to add a new feature on Artemis is so easy and you also can it on transparency way, you don't need to change the repositories. E.G: Using events can add bean validation on the workflow, without the DAO layer know.</li>
-        </ul>
-
-      </section>
-      <section>
-        <h2>Support</h2>
-        <p>Currently, JNoSQL works with the following databases</p>
-      </section>
-
-      <section>
-        <h2>Examples</h2>
-        <p>Here you can see some examples of usage of Diana.</p>
-        <!-- <pre>
-          <code>
-            public class AppDocument {
-
-              private static final String DOCUMENT_COLLECTION = "document_collection";
-              private static final String DATABASE = "database";
-
-              public static void main(String[] args)  {
-                DocumentConfiguration configuration = //any implementation
-                try(DocumentCollectionManagerFactory collectionFactory = configuration.getManagerFactory();) {
-                  DocumentCollectionManager collectionManager = collectionFactory.getDocumentEntityManager(DATABASE);
-
-                  DocumentCollectionEntity entity = DocumentCollectionEntity.of(DOCUMENT_COLLECTION);
-                  entity.add(Document.of("name", "Daniel Soro"));
-                  entity.add(Document.of("age", 26));
-
-                  DocumentCollectionEntity entitySaved = collectionManager.insert(entity);
-                  Optional<Document> id = entitySaved.find("_id");
-
-
-                    DocumentQuery query = select().from(DOCUMENT_COLLECTION).where(eq(id.get())).build();
-                    List<DocumentCollectionEntity> documentsFound = collectionManager.find(query);
-
-                    }
-                  }
-                }
-              </code>
-            </pre> -->
-
-          </section>
-
-          <footer>
-            <h2>Download</h2>
-            <p>Download
-              Diana is a flexible and extensible API to connect NoSQL databases. It brings an easy interface to support key-value, column family, document oriented and graph databases as JDBC does for SQL databases.
-
-              View on GitHub
-            </p>
-
-            <h2>Join Us</h2>
-            <p>Meet the developers, and stay tunned on the news about Diana development. You may want to become one of us!<p>
-
-              Join Us  Mailing list  Wiki
-
-              <p><small>JNoSQL is maintained by JNOSQL.</small></p>
-            </footer>
-
-          </main> <!-- col -->
-
-        </div><!-- Container -->
+  </header> <!-- header -->
 
 
 
+  <main class="main" id="main">
 
-      </body>
-      </html>
+    <nav class="ns-nav">
+      <ul class="list-unstyled">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Examples</a></li>
+        <li><a href="#">Docs</a></li>
+        <li><a href="#">Join Us</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <h2>What is JNoSQL</h2>
+      <p>The JNoSQL is a several tools to make easy an integration between the Java Application with the NoSQL. The project has two layers:</p>
+
+      <ul>
+        <li>Communication API: An API just to communicate with the database, exactly what JDBC does to SQL. This API has four specializations, one for each kind of database.</li>
+        <li>Mapping API: An API to do integration and do the best integration with the Java developer. That is annotation and CDI driven have integration with other technologies such as Bean Validation, etc. This layer does what JPA does to relational technology.</li>
+      </ul>
+      <p>The basic building blocks hereby are:</p>
+      <ul>
+        <li>A simple API to support Column NoSQL Database</li>
+        <li>A simple API to support Key-value NoSQL Database</li>
+        <li>A simple API to support Graph NoSQL Database</li>
+        <li>A simple API to support Document Database</li>
+        <li>Convention over configuration</li>
+        <li>Support for asynchronous queries</li>
+        <li>Support for asynchronous write operations</li>
+        <li>An easy API to implement, so that NoSQL vendors can comply with it and test by themselves.</li>
+      </ul>
+      <p>The API's focus is on simplicity and ease of use. Developers should only have to know a minimal set of artifacts to work with the solution. The API is built on latest Java 8 features and therefore fit perfectly with the functional features of Java 8.</p>
+
+      <h3>Diana</h3>
+      <p>The Diana project has as goal just be the low layer, in other words, just the communication layer to NoSQL database. Basically this project works as a database driver. Diana have four APIs, one for each database type, and its TCK respective. The test compatibility kit affirms if a driver implements an API correctively. So a X database of key-value implements and run all tests correctively that means this X database has support to key-value Diana API.</p>
+
+      <h3>Artemis</h3>
+      <p>Artemis is an integration layer, in other words, it has the goal to communicate with the communication layer, Diana, and it does integrations with other technologies such as Bean Validation. The Artemis engine has CDI. So it formula is really simple:</p>
+
+      <p><strong>Diana plus CDI equals to Artemis</strong></p>
+
+      <p>Look like Diana, it has a different package to each NoSQL database. Using CDI as heart, Artemis is highly customizable also observe events on the persistence flow. Artemis has a nice feature such as:</p>
+      <ul>
+        <li>Annotation based</li>
+        <li>Highly customizable \(reflection component, how to save the cache, persistence workflow, etc.\)</li>
+        <li>Listen to an event to each kind of persistence workflow \(it has differents kind of events to each database\).</li>
+        <li>Use interceptors</li>
+        <li>Using CDI events to add a new feature on Artemis is so easy and you also can it on transparency way, you don't need to change the repositories. E.G: Using events can add bean validation on the workflow, without the DAO layer know.</li>
+      </ul>
+
+    </section>
+    <section>
+      <h2>Support</h2>
+      <p>Currently, JNoSQL works with the following databases:</p>
+
+      <ul class="logo-galery list-unstyled">
+        <li><a href="#"><img src="img/logos/basho-header-logo.png" alt="brand-name"></a></li>
+        <li><a href="#"><img src="img/logos/logo-scylla.svg" alt="brand-name"></a></li>
+        <li><a href="#"><img src="img/logos/neo4j-logo-2015.png" alt="brand-name"></a></li>
+        <li><a href="#"><img src="img/logos/orientdb_logo1.png" alt="brand-name"></a></li>
+        <li><a href="#"><img src="img/logos/orientdb_logo1.png" alt="brand-name"></a></li>
+        <li><a href="#"><img src="img/logos/logo-scylla.svg" alt="brand-name"></a></li>
+        <li><a href="#"><img src="img/logos/basho-header-logo.png" alt="brand-name"></a></li>
+        <li><a href="#"><img src="img/logos/neo4j-logo-2015.png" alt="brand-name"></a></li>
+        <li><a href="#"><img src="img/logos/basho-header-logo.png" alt="brand-name"></a></li>
+        <li><a href="#"><img src="img/logos/logo-scylla.svg" alt="brand-name"></a></li>
+        <li><a href="#"><img src="img/logos/neo4j-logo-2015.png" alt="brand-name"></a></li>
+        <li><a href="#"><img src="img/logos/orientdb_logo1.png" alt="brand-name"></a></li>
+        <li><a href="#"><img src="img/logos/orientdb_logo1.png" alt="brand-name"></a></li>
+        <li><a href="#"><img src="img/logos/logo-scylla.svg" alt="brand-name"></a></li>
+        <li><a href="#"><img src="img/logos/basho-header-logo.png" alt="brand-name"></a></li>
+        <li><a href="#"><img src="img/logos/neo4j-logo-2015.png" alt="brand-name"></a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Examples</h2>
+      <p>Here you can see some examples of usage of Diana.</p>
+      <!-- <pre>
+      <code>
+      public class AppDocument {
+
+      private static final String DOCUMENT_COLLECTION = "document_collection";
+      private static final String DATABASE = "database";
+
+      public static void main(String[] args)  {
+      DocumentConfiguration configuration = //any implementation
+      try(DocumentCollectionManagerFactory collectionFactory = configuration.getManagerFactory();) {
+      DocumentCollectionManager collectionManager = collectionFactory.getDocumentEntityManager(DATABASE);
+
+      DocumentCollectionEntity entity = DocumentCollectionEntity.of(DOCUMENT_COLLECTION);
+      entity.add(Document.of("name", "Daniel Soro"));
+      entity.add(Document.of("age", 26));
+
+      DocumentCollectionEntity entitySaved = collectionManager.insert(entity);
+      Optional<Document> id = entitySaved.find("_id");
+
+
+      DocumentQuery query = select().from(DOCUMENT_COLLECTION).where(eq(id.get())).build();
+      List<DocumentCollectionEntity> documentsFound = collectionManager.find(query);
+
+    }
+  }
+}
+</code>
+</pre> -->
+
+</section>
+
+<footer>
+  <h2>Download</h2>
+  <p>Download
+    Diana is a flexible and extensible API to connect NoSQL databases. It brings an easy interface to support key-value, column family, document oriented and graph databases as JDBC does for SQL databases.
+
+    View on GitHub
+  </p>
+
+  <h2>Join Us</h2>
+  <p>Meet the developers, and stay tunned on the news about Diana development. You may want to become one of us!<p>
+
+    Join Us  Mailing list  Wiki
+
+    <p><small>JNoSQL is maintained by JNOSQL.</small></p>
+  </footer>
+
+</main> <!-- col -->
+
+</div><!-- Container -->
+
+
+
+
+</body>
+</html>
