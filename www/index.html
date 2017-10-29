@@ -13,9 +13,9 @@
 
     <header>
       <h1>
-        <div class="logo-image">
+        <span class="logo-image">
           <img src="img/logo-small.png" alt="Logo os JNoSQL: image of Duke, Java's cartoon mascot, with a bow and arrow pointing to the right">
-        </div>
+        </span>
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         viewBox="0 0 307.4 53.6" style="enable-background:new 0 0 307.4 53.6;" xml:space="preserve">
         <g>
@@ -39,30 +39,25 @@
 
     </h1>
 
-    <p>The JNoSQL is a framework to help Java developers to create Java EE applications with NoSQL, so they can create scalable application enjoying polyglot persistence.</p>
+    <p>The Eclipse JNoSQL is a framework whose has the goal to help Java developers to create Java EE applications with NoSQL, whereby they can make scalable application beyond enjoy the polyglot persistence.</p>
 
     <a href="#" class="btn btn-outline-light btn-block btn-lg">View on GitHub</a>
 
   </header> <!-- header -->
 
-
-
   <main class="main" id="main">
-
     <nav class="ns-nav">
       <ul class="list-unstyled">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Support</a></li>
-        <li><a href="#">Examples</a></li>
-        <li><a href="#">Docs</a></li>
-        <li><a href="#">Join Us</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#support">Support</a></li>
+        <li><a href="apidocs/index.html">Docs</a></li>
+        <li><a href="#join">Join Us</a></li>
       </ul>
     </nav>
 
-    <section>
-      <h2>What is JNoSQL</h2>
-      <p>The JNoSQL is a several tools to make easy an integration between the Java Application with the NoSQL. The project has two layers:</p>
+    <section id="about">
+      <h2>What is Eclipse JNoSQL</h2>
+      <p>The Eclipse JNoSQL is a several tools to make easy an integration between the Java Application with the NoSQL. The project has two layers:</p>
 
       <ul>
         <li>Communication API: An API just to communicate with the database, exactly what JDBC does to SQL. This API has four specializations, one for each kind of database.</li>
@@ -97,87 +92,62 @@
         <li>Use interceptors</li>
         <li>Using CDI events to add a new feature on Artemis is so easy and you also can it on transparency way, you don't need to change the repositories. E.G: Using events can add bean validation on the workflow, without the DAO layer know.</li>
       </ul>
+    </section><!-- ends about -->
 
-    </section>
-    <section>
+    <section id="support">
       <h2>Support</h2>
       <p>Currently, JNoSQL works with the following databases:</p>
 
       <ul class="logo-galery list-unstyled">
-        <li><a href="#"><img src="img/logos/basho-header-logo.png" alt="brand-name"></a></li>
-        <li><a href="#"><img src="img/logos/logo-scylla.svg" alt="brand-name"></a></li>
-        <li><a href="#"><img src="img/logos/neo4j-logo-2015.png" alt="brand-name"></a></li>
-        <li><a href="#"><img src="img/logos/orientdb_logo1.png" alt="brand-name"></a></li>
-        <li><a href="#"><img src="img/logos/orientdb_logo1.png" alt="brand-name"></a></li>
-        <li><a href="#"><img src="img/logos/logo-scylla.svg" alt="brand-name"></a></li>
-        <li><a href="#"><img src="img/logos/basho-header-logo.png" alt="brand-name"></a></li>
-        <li><a href="#"><img src="img/logos/neo4j-logo-2015.png" alt="brand-name"></a></li>
-        <li><a href="#"><img src="img/logos/basho-header-logo.png" alt="brand-name"></a></li>
-        <li><a href="#"><img src="img/logos/logo-scylla.svg" alt="brand-name"></a></li>
-        <li><a href="#"><img src="img/logos/neo4j-logo-2015.png" alt="brand-name"></a></li>
-        <li><a href="#"><img src="img/logos/orientdb_logo1.png" alt="brand-name"></a></li>
-        <li><a href="#"><img src="img/logos/orientdb_logo1.png" alt="brand-name"></a></li>
-        <li><a href="#"><img src="img/logos/logo-scylla.svg" alt="brand-name"></a></li>
-        <li><a href="#"><img src="img/logos/basho-header-logo.png" alt="brand-name"></a></li>
-        <li><a href="#"><img src="img/logos/neo4j-logo-2015.png" alt="brand-name"></a></li>
+        <li><a href="http://tinkerpop.apache.org/"><img alt="logo tinkerpop" src="img/logos/apache-tinkerpop.png"></a></li>
+        <li><a href="https://www.arangodb.com/"><img alt="logo ArangoDB" src="img/logos/ArangoDB.png"></a></li>
+        <li><a href="https://docs.microsoft.com/en-us/azure/cosmos-db/introduction"><img alt="logo cosmo db" src="img/logos/azure-cosmo-db.jpg"></a></li>
+        <li><a href="http://basho.com/"><img alt="logo basho" src="img/logos/basho.png"></a></li>
+        <li><a href="https://www.blazegraph.com/"><img alt="logo Blazegraph" src="img/logos/Blazegraph.png"></a></li>
+        <li><a href="http://cassandra.apache.org/"><img alt="logo cassandra" src="img/logos/cassandra.png"></a></li>
+        <li><a href="https://www.couchbase.com/"><img alt="logo couchbase" src="img/logos/couchbase.svg"></a></li>
+        <li><a href="https://www.datastax.com/"><img alt="logo DataStax" src="img/logos/DataStax.png"></a></li>
+        <li><a href="https://www.eclipse.org/org/foundation/"><img alt="logo eclipse" src="img/logos/eclipse.png"></a></li>
+        <li><a href="https://www.elastic.co/"><img alt="logo elastic" src="img/logos/elastic.svg"></a></li>
+        <li><a href="https://grakn.ai/"><img alt="logo graknai" src="img/logos/graknai.png"></a></li>
+        <li><a href="https://hazelcast.com/"><img alt="logo hazelcast" src="img/logos/hazelcast.svg"></a></li>
+        <li><a href="https://hbase.apache.org/"><img alt="logo hbase" src="img/logos/hbase.png"></a></li>
+        <li><a href="https://www.ibm.com/us-en/marketplace/graph"><img alt="logo ibmgraph" src="img/logos/ibmgraph.png"></a></li>
+        <li><a href="http://infinispan.org/"><img alt="logo infinispan" src="img/logos/infinispan.svg"></a></li>
+        <li><a href="http://janusgraph.org/"><img alt="logo janusgraph" src="img/logos/janusgraph.png"></a></li>
+        <li><a href="https://cambridge-intelligence.com/keylines/"><img alt="logo keylines" src="img/logos/keylines.png"></a></li>
+        <li><a href="https://linkurio.us/"><img alt="logo linkurios" src="img/logos/linkurios.png"></a></li>
+        <li><a href="https://www.mongodb.com/"><img alt="logo mongodb" src="img/logos/mongodb.png"></a></li>
+        <li><a href="https://neo4j.com/"><img alt="logo neo4j" src="img/logos/neo4j.png"></a></li>
+        <li><a href="https://www.oracle.com/index.html"><img alt="logo oracle" src="img/logos/oracle.png"></a></li>
+        <li><a href="http://orientdb.com/orientdb/"><img alt="logo orientdb" src="img/logos/orientdb.png"></a></li>
+        <li><a href="https://redis.io/"><img alt="logo redis" src="img/logos/redis.png"></a></li>
+        <li><a href="http://basho.com/products/"><img alt="logo riak" src="img/logos/riak.png"></a></li>
+        <li><a href="http://www.scylladb.com/"><img alt="logo scylla" src="img/logos/scylla.svg"></a></li>
+        <li><a href="http://www.stardog.com/"><img alt="logo stardog" src="img/logos/stardog.png"></a></li>
+        <li><a href="http://titan.thinkaurelius.com/"><img alt="logo titan" src="img/logos/titan.png"></a></li>
+        <li><a href="https://www.tomsawyer.com/"><img alt="logo tomsawyer" src="img/logos/tomsawyer.png"></a></li>
       </ul>
-    </section>
-
-    <section>
-      <h2>Examples</h2>
-      <p>Here you can see some examples of usage of Diana.</p>
-      <!-- <pre>
-      <code>
-      public class AppDocument {
-
-      private static final String DOCUMENT_COLLECTION = "document_collection";
-      private static final String DATABASE = "database";
-
-      public static void main(String[] args)  {
-      DocumentConfiguration configuration = //any implementation
-      try(DocumentCollectionManagerFactory collectionFactory = configuration.getManagerFactory();) {
-      DocumentCollectionManager collectionManager = collectionFactory.getDocumentEntityManager(DATABASE);
-
-      DocumentCollectionEntity entity = DocumentCollectionEntity.of(DOCUMENT_COLLECTION);
-      entity.add(Document.of("name", "Daniel Soro"));
-      entity.add(Document.of("age", 26));
-
-      DocumentCollectionEntity entitySaved = collectionManager.insert(entity);
-      Optional<Document> id = entitySaved.find("_id");
+    </section> <!-- ends support -->
 
 
-      DocumentQuery query = select().from(DOCUMENT_COLLECTION).where(eq(id.get())).build();
-      List<DocumentCollectionEntity> documentsFound = collectionManager.find(query);
+    <footer  id="join">
+      <h2>Join Us</h2>
+      <p>Meet the developers, and stay tunned on the news about Eclipse JNoSQL development. You may want to become one of us!</p>
 
-    }
-  }
-}
-</code>
-</pre> -->
 
-</section>
-
-<footer>
-  <h2>Download</h2>
-  <p>Download
-    Diana is a flexible and extensible API to connect NoSQL databases. It brings an easy interface to support key-value, column family, document oriented and graph databases as JDBC does for SQL databases.
-
-    View on GitHub
-  </p>
-
-  <h2>Join Us</h2>
-  <p>Meet the developers, and stay tunned on the news about Diana development. You may want to become one of us!<p>
-
-    Join Us  Mailing list  Wiki
-
-    <p><small>JNoSQL is maintained by JNOSQL.</small></p>
-  </footer>
-
-</main> <!-- col -->
-
+      <div class="btn-group" role="group">
+        <a href="https://gitter.im/orgs/JNOSQL/rooms" class="btn btn-outline-light">Join Us</a>
+        <a href="https://dev.eclipse.org/mailman/listinfo/jnosql-dev" class="btn btn-outline-light">Mailing list</a>
+        <a href="https://wiki.eclipse.org/JNoSQL" class="btn btn-outline-light">Wiki</a>
+      </div>
+      <div class="footnote">
+        <p><a href="https://github.com/JNOSQL/">Eclipse JNoSQL</a> is maintained by <a href="https://github.com/JNOSQL/">Eclipse JNoSQL</a>.</p>
+        <p>Website Designed with ❤️ by the <a href="https://github.com/orgs/eclipse/people">JNoSQL Community</a></p>
+      </div>
+    </footer>
+  </main> <!-- col -->
 </div><!-- Container -->
-
-
 
 
 </body>
